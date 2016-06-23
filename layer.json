@@ -4,7 +4,8 @@
 	"data":true,
 	"divs":{
 		"underconstruction":{
-			"tpl":"underconstruction.html"
+			"seojson":"-underconstruction.json",
+			"tpl":"-underconstruction.html"
 		}
 	}
 }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sehr Schon - Скоро открытие</title>
 	<style>
 		.underconstruction {
 			margin:0 auto;
