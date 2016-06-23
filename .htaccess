@@ -1,0 +1,24 @@
+AddDefaultCharset utf-8
+
+# Настройка маршрутизации
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ vendor/infrajs/router/index.php [L,QSA]
+
+# Файлы с точкой в начале не доступны через браузер
+<FilesMatch "^\.">
+	Order Deny,Allow
+	Deny from all
+</FilesMatch>
+
+# Для статических файлов кэш на 4 недели (2419200 сек)
+<FilesMatch "\.(woff|jpeg|jpg|png|gif|tpl|ico|js|json|html)$">
+    Header set Cache-Control "max-age=2419200, public"
+</FilesMatch>
+
+# Архивировать данные на сервере перед передачей их в браузер
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
