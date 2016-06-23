@@ -1,0 +1,10 @@
+{
+	"tpl":"-underconstruction/index.tpl",
+	"domready":true,
+	"data":true,
+	"divs":{
+		"underconstruction":{
+			"tpl":"underconstruction.html"
+		}
+	}
+}
