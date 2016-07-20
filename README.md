@@ -11,14 +11,20 @@
 ```
 
 ## Использование
-- В корне создать файл underconstruction.html и underconstruction.json. Пример можно скопировать из папки расширения.
+Cкопировать в корне из папки расширения примеры стартовых файлов 
+- underconstruction.html - содержание страницы
+- underconstruction.json - seo meta теги
+- favicon.ico - сделать, примера нет http://www.favicon.by
+- index.json - конфиг с одним слоем для сайта
+- Создать конфиг .infra.json с темой сайта buildings food nature people technology objects
 
-- В конфиге .infra.json указать тему сайта. Возможные значения buildings food nature people technology objects. Используется [API](https://source.unsplash.com) [unsplash.com](https://unsplash.com)
+
+Используется [API](https://source.unsplash.com) [unsplash.com](https://unsplash.com)
 
 ```json
 {
 	"underconstruction":{
-		"category":"foot"
+		"category":"food"
 	}
 }
 ```
