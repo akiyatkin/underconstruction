@@ -16,25 +16,5 @@ Cкопировать в корень из папки расширения пр�
 - underconstruction.json - seo meta теги
 - favicon.ico - сделать, примера нет http://www.favicon.by
 - index.json - конфиг с одним слоем для сайта
-- Создать конфиг .infra.json с темой сайта buildings food nature people technology objects
-
-
-Используется [API](https://source.unsplash.com) [unsplash.com](https://unsplash.com)
-
-```json
-{
-	"underconstruction":{
-		"category":"food"
-	}
-}
-```
-
-- Создать index.json со слоем
-
-```json
-{
-	"external":"-underconstruction/layer.json"
-}
-```
-
-- Скопировать из папки расширения .htaccess
+- .htaccess - настройка маршрутизации, для работы коротких адресов
+- Создать конфиг .infra.json с темой сайта - buildings food nature people technology objects
