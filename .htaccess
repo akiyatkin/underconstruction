@@ -4,14 +4,15 @@ AddDefaultCharset utf-8
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301]
+
+# Файлы с точкой в начале не доступны через браузер
+RewriteCond %{REQUEST_FILENAME} \/\.
+RewriteRule (.*) [L,F]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ vendor/infrajs/router/index.php [L,QSA]
 
-# Файлы с точкой в начале не доступны через браузер
-<FilesMatch "^\.">
-	Order Deny,Allow
-	Deny from all
-</FilesMatch>
+
 
 # Для статических файлов кэш на 4 недели (2419200 сек)
 <FilesMatch "\.(woff|jpeg|jpg|png|gif|tpl|ico|js|json|html)$">
