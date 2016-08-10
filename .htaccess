@@ -3,7 +3,7 @@ AddDefaultCharset utf-8
 # Настройка маршрутизации
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301]
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
 
 # Файлы с точкой в начале не доступны через браузер
 RewriteCond %{REQUEST_FILENAME} \/\.
