@@ -1,4 +1,4 @@
-/cache
-/data
-/vendor
-/bower_components
+/cache/
+/data/
+/vendor/
+/bower_components/
