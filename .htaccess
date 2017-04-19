@@ -15,7 +15,7 @@ RewriteRule ^(.*)$ vendor/infrajs/router/index.php [L,QSA]
 
 
 # Для статических файлов кэш на 1 неделю (604800 сек)
-<FilesMatch "\.(woff|jpeg|jpg|png|gif|tpl|ico|js|json|html|webp)$">
+<FilesMatch "\.(woff|jpeg|jpg|png|gif|tpl|ico|js|json|html|webp|woff2)$">
     Header set Cache-Control "max-age=604800, private"
 </FilesMatch>
 
