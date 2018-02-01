@@ -1,7 +1,6 @@
 {
 	"name": "akiyatkin/underconstruction",
-    "description": "Сайт infrajs в разрботке с картинкой от unsplash.com",
-    "license": "GPL3",
+	"description": "Сайт infrajs в разрботке с картинкой от unsplash.com",
 	"require":{
 		"infrajs/config":"~1",
 		"infrajs/router":"~1",
