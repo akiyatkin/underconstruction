@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /cart
+Disallow: /user
+Clean-param: m /catalog
+Clean-param: utm_
+Clean-param: yclid
+Clean-param: -
