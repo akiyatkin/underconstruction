@@ -12,11 +12,12 @@ RewriteRule (.*) [L,F]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ vendor/infrajs/router/index.php [L,QSA]
 
-
-
-# Для статических файлов кэш на 1 неделю (604800 сек)
-<FilesMatch "\.(woff|jpeg|jpg|png|gif|tpl|ico|js|json|html|webp|woff2)$">
-    Header set Cache-Control "max-age=604800, private"
+# Для статических файлов кэш на 4 недели (2419200 сек)
+RewriteCond %{QUERY_STRING} -nostore [NC]
+RewriteRule ^ - [E=NOSTORE]
+Header set Cache-Control "no-store, max-age=0"
+<FilesMatch "\.(woff|jpeg|jpg|png|gif|tpl|ico|js|json|html)$">
+ 		Header set Cache-Control "max-age=2419200, public" env=!NOSTORE
 </FilesMatch>
 
 # Архивировать данные на сервере перед передачей их в браузер
